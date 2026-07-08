@@ -37,7 +37,7 @@ const ResetPassword = () => {
 
     setStatus("loading");
     try {
-      const response = await axios.put(`${API_URL}/auth/reset-password/${id}/${token}`, {
+      const response = await API.put(`/auth/reset-password/${id}/${token}`, {
         password: form.password,
       });
       setStatus("success");
